@@ -52,7 +52,7 @@ const Book = () => {
     axios.post(url, book)
         .then(response => {
             const result = response.data;
-            const { status, message, data } = result;
+            const { status, message } = result;
             if (status !== 'SUCCESS') {
                 alert(message, status)
                 window.location.reload()
